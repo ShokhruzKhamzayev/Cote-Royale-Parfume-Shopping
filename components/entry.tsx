@@ -1,13 +1,29 @@
 'use client'
 import { motion } from "framer-motion"
+import PopUpText from "./shared/popUpText"
+
+const content = {
+    title: "Effortless Elegance",
+    desc: "An expression of quiet luxury, Côte Royale is designed for the man who commands attention without seeking it. A reflection of nature’s raw beauty."
+}
 
 export default function EntryPage() {
   return (
     <div className="relative w-full h-screen flex items-center overflow-hidden">
         <div className="max-w-[400px] ml-[150px]">
-            <h1 className={`text-8xl leading-[120%]`}>Effortless Elegance</h1>
-            <p className="font-light tracking-wide my-[20px]">An expression of quiet luxury, Côte Royale is designed for the man who commands attention without seeking it. A reflection of nature’s raw beauty.</p>
-            <button className="border border-white py-[20px] px-[35px]">Shop Now</button>
+            <h1 className={`text-8xl leading-[120%]`}>
+                <PopUpText text={content.title}/>
+            </h1>
+            <motion.p 
+                initial={{y: "60%", opacity: 0}}
+                animate={{y: 0, opacity: 1}}
+                transition={{ease: 'linear', delay: 1, duration: 0.7}}
+            className="font-light tracking-wide my-[20px]">{content.desc}</motion.p>
+            <motion.button
+                initial={{y: "60%", opacity: 0}}
+                animate={{y: 0, opacity: 1}}
+                transition={{ease: 'linear', delay: 1.5, duration: 0.7}}
+             className="border border-white py-[15px] px-[45px]">Shop Now</motion.button>
         </div>
         <motion.img
             initial={{scale: 1.2, opacity: 0}}
