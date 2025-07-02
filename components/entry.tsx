@@ -1,6 +1,7 @@
 'use client'
 import { motion } from "framer-motion"
 import PopUpText from "./shared/popUpText"
+import Button from "./shared/button"
 
 const content = {
     title: "Effortless Elegance",
@@ -19,11 +20,12 @@ export default function EntryPage() {
                 animate={{y: 0, opacity: 1}}
                 transition={{ease: 'linear', delay: 1, duration: 0.7}}
             className="font-light tracking-wide my-[20px]">{content.desc}</motion.p>
-            <motion.button
+            <motion.div
                 initial={{y: "60%", opacity: 0}}
                 animate={{y: 0, opacity: 1}}
-                transition={{ease: 'linear', delay: 1.5, duration: 0.7}}
-             className="border border-white py-[15px] px-[45px]">Shop Now</motion.button>
+                transition={{ease: 'linear', delay: 1.5, duration: 0.7}}>
+                    <Button variants="outline">Shop now</Button>
+             </motion.div>
         </div>
         <motion.img
             initial={{scale: 1.2, opacity: 0}}
