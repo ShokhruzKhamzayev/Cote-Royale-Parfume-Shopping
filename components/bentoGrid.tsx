@@ -13,7 +13,7 @@ export default function BentoGrid() {
             transition={{ease: 'easeInOut', duration: 0.5}}
             whileInView={{y: 0, opacity: 1}}
          className='lg:col-span-2 lg:row-span-2 w-full'>
-            <Image src={'/grid-content.jpg'} alt='featuring content' width={500} height={300} className='w-[100%] h-[700px] object-cover rounded-[15px]'/>
+            <Image src={'https://images.prismic.io/cote-royale-course/aBQNx_IqRLdaBzha_grid-picture.jpg?auto=format%2Ccompress&fit=max&w=828'} alt='featuring content' width={500} height={300} className='w-[100%] h-[700px] object-cover rounded-[15px]' loading='lazy'/>
         </MotionWrapper>
         <MotionWrapper
             as={"div"}
@@ -34,7 +34,7 @@ export default function BentoGrid() {
             viewport={{once: true}}
             transition={{ease: 'easeInOut', duration: 0.4, delay: 0.8}}
             whileInView={{y: 0, opacity: 1}} className='bg-white/10 p-10 self-end rounded-[20px]'>
-            <Image src={'/ignis.avif'} alt='the picture of parfume' width={100} height={80} className='w-[80%] mx-auto rotate-[-15deg] mt-[-100px]'/>
+            <Image src={'https://images.prismic.io/cote-royale-course/aBQNyfIqRLdaBzhc_ignis-bottle.png?auto=format%2Ccompress&fit=max&w=1920'} alt='the picture of parfume' width={100} height={80} className='w-[80%] mx-auto rotate-[-15deg] mt-[-100px]' loading='lazy'/>
             <div className='flex justify-between items-center my-[20px]'>
                 <div>
                     <h1 className='text-3xl font-semibold'>Ignis</h1>

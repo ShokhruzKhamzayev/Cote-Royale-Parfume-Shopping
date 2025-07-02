@@ -5,6 +5,6 @@ export default function Button({variants, children}: {
     children: React.ReactNode
 }) {
   return (
-    <button className={`border py-[15px] px-[45px] flex items-center justify-center gap-[10px] ${variants === "outline" ? "text-white border-white" : "bg-white text-black"}`}>{children}</button>
+    <button className={`border py-[15px] px-[45px] uppercase flex items-center justify-center gap-[10px] ${variants === "outline" ? "text-white border-white" : "bg-white text-black"}`}>{children}</button>
   )
 }
