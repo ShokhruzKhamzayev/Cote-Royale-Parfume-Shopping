@@ -4,12 +4,12 @@ import localFont from 'next/font/local'
 import "./globals.css";
 import Header from "@/components/header";
 
-export const raleway = Raleway({
+const raleway = Raleway({
   variable: "--font-raleway",
   subsets: ["latin"],
 });
 
-export const gambarino = localFont({
+const gambarino = localFont({
   src: '../fonts/Gambarino-Regular.otf',
   weight: '400',
   variable: "--font-gambarino"
