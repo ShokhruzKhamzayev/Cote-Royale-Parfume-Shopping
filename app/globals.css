@@ -61,3 +61,8 @@ body {
         max-width: 1440px;
     }
 }
+
+.glow-background {
+  background-color:#0000;
+  background-image:radial-gradient(at 29% 43%,#d4f1f714 0,#0000 50%),radial-gradient(at 53% 28%,#cff5fc2e 0,#0000 50%),radial-gradient(at 47% 71%,#d4f1f721 0,#0000 40%),radial-gradient(at 3% 95%,#1a1a1a33 0,#0000 50%),radial-gradient(at 3% 3%,#052e1333 0,#0000 50%),radial-gradient(at 90% 5%,#03101733 0,#0000 50%),radial-gradient(at 90% 80%,#050c2e33 0,#0000 50%)
+}

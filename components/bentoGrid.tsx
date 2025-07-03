@@ -5,7 +5,7 @@ import MotionWrapper from './shared/motionWrapper'
 
 export default function BentoGrid() {
   return (
-    <div className='custom-container grid grid-cols-1 lg:grid-cols-3 gap-[30px] lg:grid-rows-[auto,auto] h-fit'>
+    <div className='custom-container grid grid-cols-1 lg:grid-cols-3 gap-[30px] lg:grid-rows-[auto,auto] h-fit mt-[60px]'>
         <MotionWrapper
             as={"div"}
             initial={{y: "20%", opacity: 0}}

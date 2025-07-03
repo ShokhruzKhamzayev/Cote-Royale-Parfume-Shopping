@@ -1,7 +1,5 @@
 'use client'
-import { useMotionValueEvent, useScroll } from "framer-motion";
 import Image from "next/image";
-import { useState } from "react";
 import { BiMenu, BiUser } from 'react-icons/bi';
 import { BsCart } from "react-icons/bs";
 import { PiMagnifyingGlass } from "react-icons/pi";
@@ -10,14 +8,9 @@ import MotionWrapper from "./shared/motionWrapper";
 
 
 export default function Header() {
-    const {scrollY} = useScroll()
-    const [state, setState] = useState(false)
-    useMotionValueEvent(scrollY, "change", (latest) => {
-        console.log(latest)
-    })
 return (
     <MotionWrapper as={'header'}
-    className={`flex justify-between items-center py-[10px] px-[30px] bg-black text-white  top-0 w-full left-0 z-[999]  ${state ? "fixed w-[70%] rounded-full" : "absolute"}`}>
+    className={`flex justify-between items-center py-[10px] px-[30px] bg-black text-white  top-0 w-full left-0 z-[999] absolute `}>
         <div className="w-1/3">
             <button>
                 <BiMenu size={25}/>            
