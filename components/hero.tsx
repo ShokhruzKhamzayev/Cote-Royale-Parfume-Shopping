@@ -16,8 +16,8 @@ export default function Hero() {
   useMotionValueEvent(scrollYProgress, 'change', (l) => console.log(blur.get()))
   return (
     <motion.div className="relative h-[250vh]" ref={ref} style={{filter: blur}}>
-      <motion.div style={{opacity}} className="glow-background fixed top-0 inset-0 z-0 h-full w-full opacity-100"></motion.div>
       <div className="sticky top-0 left-0 flex justify-center items-center min-h-screen flex-col gap-[40px]">
+        <motion.div style={{opacity}} className="glow-background fixed top-0 inset-0 z-0 h-full w-full opacity-100"></motion.div>
         <span className="block text-center uppercase text-neutral-200">Defining luxury</span>
         <div className={`max-w-[1000px] text-center uppercase`}>
           <LetterReveal color={color} text="Côte Royale is designed for the man who commands attention without seeking it"/>

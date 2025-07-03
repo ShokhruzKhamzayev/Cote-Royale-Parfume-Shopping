@@ -14,7 +14,8 @@ export default function PopUpText({text}: {
                     initial={{y: "100%"}}
                     whileInView={{y: 0}}
                     viewport={{once: true}}
-                    transition={{ease: 'backInOut', duration: 0.7 * (i + 1)}} className="block">{l}</MotionWrapper>
+                    className='block'
+                    transition={{ease: 'backInOut', duration: 0.7 * (i + 1)}}>{l}</MotionWrapper>
                 </span>
             ))
         }

@@ -70,9 +70,21 @@ export default function Products() {
         <div className="my-[50px] space-y-[70px]">
           {
             products.map(product => (
-            <div className="relative w-full h-fit overflow-hidden border border-gray-800" key={product.title}>
+            <MotionWrapper
+              as={'div'}
+              initial={{y: "40%", opacity: 0}}
+              whileInView={{y: 0, opacity: 1}}
+              transition={{ease: 'easeInOut', duration: 0.6}}
+              viewport={{once: true}}
+            className="relative w-full h-fit overflow-hidden border border-gray-800" key={product.title}>
               <Image src={product.image} alt={product.title} width={500} height={400} className="absolute w-full h-fit object-cover object-top z-[-1]"/>
-              <div className="max-w-[50%] pl-[70px] py-[70px]">
+              <MotionWrapper
+                as={'div'}
+                initial={{opacity: 0}}
+                whileInView={{opacity: 1}}
+                transition={{duration: 0.4, ease: "easeInOut"}}
+                viewport={{amount: 'all', once: true}}
+              className="max-w-[50%] pl-[70px] py-[70px]">
                 <h1 className="text-7xl ">{product.title}</h1>
                 <span className="text-gray-300 font-semibold">{product.subtitle}</span>
                 <p className="my-[60px] font-medium text-gray-300">{product.desc}</p>
@@ -94,8 +106,8 @@ export default function Products() {
                     Add to bag
                   </Button>
                 </div>
-              </div>
-            </div>
+              </MotionWrapper>
+            </MotionWrapper>
             ))
           }
         </div>
