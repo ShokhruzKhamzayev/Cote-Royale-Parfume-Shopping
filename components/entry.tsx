@@ -11,7 +11,7 @@ const content = {
 export default function EntryPage() {
   return (
     <div className="relative w-full h-screen flex items-center overflow-hidden">
-        <div className="max-w-[90%] mx-auto md:max-w-[400px] md:ml-[150px] text-center ">
+        <div className="max-w-[90%] mx-auto md:max-w-[400px] md:ml-[150px] text-center md:text-left">
             <h1 className={`text-7xl md:text-8xl leading-[120%]`}>
                 <PopUpText text={content.title}/>
             </h1>
@@ -23,7 +23,7 @@ export default function EntryPage() {
             <motion.div
                 initial={{y: "60%", opacity: 0}}
                 animate={{y: 0, opacity: 1}}
-                transition={{ease: 'linear', delay: 1.5, duration: 0.7}} className="w-fit mx-auto">
+                transition={{ease: 'linear', delay: 1.5, duration: 0.7}} className="w-fit mx-auto md:mx-0">
                     <Button variants="outline">Shop now</Button>
              </motion.div>
         </div>
