@@ -13,7 +13,7 @@ export default function BentoGrid() {
             transition={{ease: 'easeInOut', duration: 0.5}}
             whileInView={{y: 0, opacity: 1}}
          className='lg:col-span-2 lg:row-span-2 w-full'>
-            <Image src={'https://images.prismic.io/cote-royale-course/aBQNx_IqRLdaBzha_grid-picture.jpg?auto=format%2Ccompress&fit=max&w=828'} alt='featuring content' width={500} height={300} className='w-[100%] h-[700px] object-cover rounded-[15px]' loading='lazy'/>
+            <Image src={'https://images.prismic.io/cote-royale-course/aBQNx_IqRLdaBzha_grid-picture.jpg?auto=format%2Ccompress&fit=max&w=828'} alt='featuring content' width={500} height={300} className='w-[100%] lg:h-[700px] object-cover rounded-[15px]' loading='lazy'/>
         </MotionWrapper>
         <MotionWrapper
             as={"div"}

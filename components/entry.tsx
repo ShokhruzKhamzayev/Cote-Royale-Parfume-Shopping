@@ -11,19 +11,19 @@ const content = {
 export default function EntryPage() {
   return (
     <div className="relative w-full h-screen flex items-center overflow-hidden">
-        <div className="max-w-[400px] ml-[150px]">
-            <h1 className={`text-8xl leading-[120%]`}>
+        <div className="max-w-[90%] mx-auto md:max-w-[400px] md:ml-[150px] text-center ">
+            <h1 className={`text-7xl md:text-8xl leading-[120%]`}>
                 <PopUpText text={content.title}/>
             </h1>
             <motion.p 
                 initial={{y: "60%", opacity: 0}}
                 animate={{y: 0, opacity: 1}}
                 transition={{ease: 'linear', delay: 1, duration: 0.7}}
-            className="font-light tracking-wide my-[20px]">{content.desc}</motion.p>
+            className="font-light tracking-wide my-[20px] text-[14px] md:text-[17px]">{content.desc}</motion.p>
             <motion.div
                 initial={{y: "60%", opacity: 0}}
                 animate={{y: 0, opacity: 1}}
-                transition={{ease: 'linear', delay: 1.5, duration: 0.7}}>
+                transition={{ease: 'linear', delay: 1.5, duration: 0.7}} className="w-fit mx-auto">
                     <Button variants="outline">Shop now</Button>
              </motion.div>
         </div>

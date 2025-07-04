@@ -2,9 +2,9 @@
 import { MotionValue } from "framer-motion"
 import MotionWrapper from "./shared/motionWrapper"
 
-export default function LetterReveal({text, color}: {
+export default function LetterReveal({text, className}: {
     text: string,
-    color: MotionValue<string>
+    className?: string
 }) {
     const textSplitted = text.split("")
   return (
@@ -17,7 +17,7 @@ export default function LetterReveal({text, color}: {
                 whileInView={{color: "rgb(256, 256, 256)"}}
                 transition={{ease: 'easeIn', delay: 0.05 * i}}
                 viewport={{amount: "all"}}
-            key={i} className="text-6xl leading-[140%]">{l}</MotionWrapper>
+            key={i} className={`leading-[140%] ${className}`}>{l}</MotionWrapper>
         ))
     }
    </p>
