@@ -58,11 +58,11 @@ const links = [
 export default function Footer() {
   return (
     <footer className="custom-container">
-      <div className="top-footer flex justify-between flex-wrap py-[50px]">
+      <div className="top-footer flex justify-between flex-wrap gap-[25px] py-[50px]">
         {
           links.map(content => (
             <div key={content.title} className="space-y-[30px]">
-              <h2 className="font-semibold text-3xl ">{content.title}</h2>
+              <h2 className="font-semibold text-2xl md:text-3xl ">{content.title}</h2>
               <div className="flex flex-col gap-[15px]">
                 {
                   content.actualLinks.map(link => (
@@ -75,9 +75,9 @@ export default function Footer() {
           ))
         }
       </div>
-      <div className="bottom-footer border-t border-slate-300 py-[30px] flex justify-between items-center">
+      <div className="bottom-footer border-t border-slate-300 py-[30px] flex justify-between items-center flex-col lg:flex-row gap-[20px]">
         <span className="text-gray-300">© {new Date().getFullYear()} Côte Royale Inc. All rights reserved</span>
-        <Link href={'/'}>
+        <Link href={'/'} className="hidden lg:block">
           <Image src={'/logo.svg'} alt="Logo of Parfume brand" width={300} height={200} className="w-[150px]"/>
         </Link>
         <div className="flex items-center gap-[20px]">

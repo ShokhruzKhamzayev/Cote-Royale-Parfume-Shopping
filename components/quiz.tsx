@@ -5,15 +5,15 @@ import PopUpText from "./shared/popUpText";
 export default function Quiz() {
   return (
     <div className="bg-[url('/backgroundQuiz.avif')] h-[70vh] w-full bg-cover flex justify-center items-center">
-        <div className="max-w-[700px] text-center">
+        <div className="max-w-[90%] md:max-w-[700px] text-center">
             <MotionWrapper 
               as={'h3'}
               initial={{y: "40%", opacity: 0}}
               whileInView={{y: 0, opacity: 1}}
               transition={{ease: 'easeInOut', duration: 0.4}}
               viewport={{once: true}}
-            className="uppercase text-[23px] text-gray-300 font-semibold ">Fragrance Quiz</MotionWrapper>
-            <h1 className="text-[57px] font-semibold mt-[15px] mb-[25px] flex gap-[30px] flex-wrap justify-center">
+            className="uppercase text-[15px] md:text-[23px] text-gray-300 font-semibold ">Fragrance Quiz</MotionWrapper>
+            <h1 className="text-5xl md:text-[57px] font-semibold mt-[15px] mb-[25px] flex gap-[30px] flex-wrap justify-center">
                 <PopUpText text="The Cote Royale Fragrance Finder"/>
             </h1>
             <MotionWrapper

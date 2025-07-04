@@ -77,19 +77,19 @@ export default function Products() {
               transition={{ease: 'easeInOut', duration: 0.6}}
               viewport={{once: true}}
             className="relative w-full h-fit overflow-hidden border border-gray-800" key={product.title}>
-              <Image src={product.image} alt={product.title} width={500} height={400} className="absolute w-full h-fit object-cover object-top z-[-1]"/>
+              <Image src={product.image} alt={product.title} width={500} height={400} className="absolute w-full h-full object-cover object-left md:object-top z-[-1]"/>
               <MotionWrapper
                 as={'div'}
                 initial={{opacity: 0}}
                 whileInView={{opacity: 1}}
                 transition={{duration: 0.4, ease: "easeInOut"}}
                 viewport={{amount: 'all', once: true}}
-              className="max-w-[50%] pl-[70px] py-[70px]">
-                <h1 className="text-7xl ">{product.title}</h1>
+              className="w-full md:max-w-[50%] p-[15px] md:pl-[70px] md:py-[70px]">
+                <h1 className="text-4xl md:text-7xl">{product.title}</h1>
                 <span className="text-gray-300 font-semibold">{product.subtitle}</span>
-                <p className="my-[60px] font-medium text-gray-300">{product.desc}</p>
+                <p className="my-[20px] md:my-[60px] font-medium text-gray-300">{product.desc}</p>
                 <div>
-                  <p className="uppercase font-semibold text-[19px]">Features</p>
+                  <p className="uppercase font-semibold text-[13px] md:text-[19px]">Features</p>
                   {
                     product.features.map(feature => (
                       <div className="flex items-center gap-[6px] my-[5px]" key={feature.text}>
@@ -99,7 +99,7 @@ export default function Products() {
                     ))
                   }
                 </div>
-                <div className="flex items-center gap-[20px] mt-[50px]">
+                <div className="flex md:items-center gap-[20px] mt-[50px] flex-col md:flex-row">
                   <Button variants="outline">Discover</Button>
                   <Button variants="default">
                     <BiPlus/>
